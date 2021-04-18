@@ -5,26 +5,28 @@
 
 int
 main(int argc, char *argv[]) {
+    std::copy(argv, argv + argc, std::ostream_iterator<char *>(std::cout, "\n"));
+
     if (argc < 2) {
         std::cerr << "dog: missing input file!\n";
         std::cerr << "usage: dog <input_file> [-n]\n";
-        return -1;
+        return EXIT_FAILURE;
     }
 
     std::ifstream input_file(argv[1], std::ios::in);
     if (!input_file.is_open()) {
         std::cerr << "dog: could not open input file '" << argv[1] << "'!\n";
-        return -1;
+        return EXIT_FAILURE;
     }
 
     std::string line;
     int         line_count = 1;
     while (std::getline(input_file, line)) {
-        if (argc >= 3 && argv[2] == std::string("-n"))
+        if (argc >= 3 && strcmp(argv[2], "-n") == 0)
             std::cout << std::setw(5) << std::setfill(' ') << line_count++ << "  ";
 
         std::cout << line << '\n';
     }
 
-    return 0;
+    return EXIT_SUCCESS;
 }
