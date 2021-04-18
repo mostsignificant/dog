@@ -36,4 +36,5 @@ archive/
 build/
 cmake*/
 .idea/
+.vscode/
 _build/
