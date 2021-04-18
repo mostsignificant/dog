@@ -1,0 +1,16 @@
+---
+BasedOnStyle: Google
+---
+Language: Cpp
+AccessModifierOffset: -4
+AlignConsecutiveAssignments: true
+AlignConsecutiveDeclarations: true
+AlignEscapedNewlines: Left
+AlignOperands: true
+AlignTrailingComments: true
+AlwaysBreakAfterReturnType: AllDefinitions
+AlwaysBreakTemplateDeclarations: Yes
+ColumnLimit: 120
+IndentWidth: 4
+UseTab: Never
+---
