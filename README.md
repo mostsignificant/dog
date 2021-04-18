@@ -1,4 +1,4 @@
-# dog: a cat-like cli tool for showcasing parsing cli arguments 🐕 
+# dog: a cat-like cli tool 🐕 
 
 You probably heard of and used [cat](https://www.man7.org/linux/man-pages/man1/cat.1.html) in Linux. Now be ready for the arrival of dog! A command line tool similar to cat to showcase three different methods of command line argument parsing in C++.
 
