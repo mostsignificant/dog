@@ -5,7 +5,9 @@
 
 int
 main(int argc, char *argv[]) {
+#ifdef _DEBUG
     std::copy(argv, argv + argc, std::ostream_iterator<char *>(std::cout, "\n"));
+#endif
 
     if (argc < 2) {
         std::cerr << "dog: missing input file!\n";
