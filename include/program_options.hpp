@@ -2,17 +2,16 @@
 #define THAT_THIS_PROGRAM_OPTIONS_HEADER_FILE_IS_ALREADY_INCLUDED
 
 #include <string_view>
+#include <vector>
 
-class program_options {
-public:
-    void parse(int argc, char *argv[]);
+namespace program_options {
 
-    std::string_view input_file() const noexcept;
-    bool             show_line_numbers() const noexcept;
+void parse(int argc, char* argv[]);
 
-private:
-    std::string_view _input_file;
-    bool             _show_line_numbers = false;
-};
+const std::vector<std::string_view>& input_files();
+bool                                 show_ends();
+bool                                 show_line_numbers();
+
+};  // namespace program_options
 
 #endif  // THAT_THIS_PROGRAM_OPTIONS_HEADER_FILE_IS_ALREADY_INCLUDED
