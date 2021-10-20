@@ -1,0 +1,14 @@
+#ifndef THAT_THIS_VERSION_HEADER_FILE_IS_ALREADY_INCLUDED
+#define THAT_THIS_VERSION_HEADER_FILE_IS_ALREADY_INCLUDED
+
+// clang-format off
+
+constexpr auto DogMajorVersion = @DOG_VERSION_MAJOR@;
+constexpr auto DogMinorVersion = @DOG_VERSION_MINOR@;
+constexpr auto DogPatchVersion = @DOG_VERSION_PATCH@;
+
+constexpr auto DogWholeVersion = "@DOG_VERSION_MAJOR@.@DOG_VERSION_MINOR@.@DOG_VERSION_PATCH@";
+
+// clang-format on
+
+#endif  // THAT_THIS_VERSION_HEADER_FILE_IS_ALREADY_INCLUDED
