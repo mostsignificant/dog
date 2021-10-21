@@ -1,4 +1,5 @@
 #include <fstream>
+#include <iomanip>
 #include <iostream>
 #include <string>
 
@@ -15,7 +16,7 @@ main(int argc, char *argv[]) {
     }
 
     for (const auto &file_name : program_options::input_files()) {
-        std::ifstream input_file(file_name, std::ios::in);
+        std::ifstream input_file(file_name.data(), std::ios::in);
         if (!input_file.is_open()) {
             std::cerr << "dog: could not open input file '" << file_name << "'!\n";
             return EXIT_FAILURE;
