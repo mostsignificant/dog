@@ -7,7 +7,7 @@ constexpr auto DogMajorVersion = @DOG_VERSION_MAJOR@;
 constexpr auto DogMinorVersion = @DOG_VERSION_MINOR@;
 constexpr auto DogPatchVersion = @DOG_VERSION_PATCH@;
 
-constexpr auto DogWholeVersion = "@DOG_VERSION_MAJOR@.@DOG_VERSION_MINOR@.@DOG_VERSION_PATCH@";
+constexpr auto DogVersion = "@DOG_VERSION@";
 
 // clang-format on
 

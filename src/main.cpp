@@ -29,7 +29,7 @@ main(int argc, char *argv[]) {
     }
 
     if (result.count("version")) {
-        std::cout << "dog version " << DogWholeVersion << '\n';
+        std::cout << "dog version " << DogVersion << '\n';
         return EXIT_SUCCESS;
     }
 
