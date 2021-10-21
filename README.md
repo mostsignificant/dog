@@ -1,3 +1,5 @@
+[![CMake](https://github.com/mostsignificant/dog/actions/workflows/cmake.yml/badge.svg?branch=method-quick-and-dirty)](https://github.com/mostsignificant/dog/actions/workflows/cmake.yml)
+
 # dog: a cat-like cli tool 🐕
 
 You probably heard of and used [cat](https://www.man7.org/linux/man-pages/man1/cat.1.html) in Linux. Now be ready for
