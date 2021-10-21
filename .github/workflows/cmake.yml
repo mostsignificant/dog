@@ -2,9 +2,9 @@ name: CMake
 
 on:
   push:
-    branches: [ main, method-quick-and-dirty, method-diy, method-lib ]
+    branches: [main, method-quick-and-dirty, method-diy, method-lib]
   pull_request:
-    branches: [ main, method-quick-and-dirty, method-diy, method-lib ]
+    branches: [main, method-quick-and-dirty, method-diy, method-lib]
 
 env:
   # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
@@ -15,12 +15,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+      - uses: textbook/git-checkout-submodule-action@master
 
-    - name: Configure CMake
-      run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
+      - name: Configure CMake
+        run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
 
-    - name: Build
-      run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}
-
-      
+      - name: Build
+        run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}
